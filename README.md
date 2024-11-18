@@ -36,30 +36,38 @@ Take a  $2\times 2\times 2$ sparse matrix multiplication algorithm with the (1,1
 ```
 
 For the part contains A, each row corresponds to an intermediate variable $M_i$ calculated by adding or subtracting elements from A and B:
+
 $$
-M_1=A_{22}(B_{11}+B_{22})\\
-M_2=(A_{21}+A_{22})B_{11}\\
-M_3=A_{22}(B_{21}-B_{11})\\
-M_4=A_{12}B_{22}\\
-M_5=A_{21}(B_{11}+B_{12})\\
-M_6=(A_{12}-A_{22})(B_{21}+B_{22})
+\begin{array}{l}
+M_1 = A_{22}(B_{11} + B_{22}) \\
+M_2 = (A_{21} + A_{22})B_{11} \\
+M_3 = A_{22}(B_{21} - B_{11}) \\
+M_4 = A_{12}B_{22} \\
+M_5 = A_{21}(B_{11} + B_{12}) \\
+M_6 = (A_{12} - A_{22})(B_{21} + B_{22})
+\end{array}
 $$
+
 For the part contains C, each row represents the role of the intermediate variable $M_i$ when calculating a specific element of the final matrix C. The coefficient in front of $C_{xy}$ represents the actual coefficient of $M_i$ when computing the element $(x,y)$ of matrix C:
+
 $$
+\begin{array}{l}
 C_{11}=M_1+M_3-M_4+M_6\\
 C_{12}=M_4\\
 C_{21}=M_2+M_3\\
 C_{22}=M_1-M_2+M_5
+\end{array}
 $$
+
 The decomposition algorithm above is equivalent to the matrix multiplication calculation below:
+
 $$
 \left(
 \begin{array}{cc}
  c _ { 11 } & c _ { 12 } \\
  c _ { 21 } & c _ { 22 }
 \end{array}
-\right)
-=
+\right) =
 \left(
 \begin{array}{cc}
 0 & a _ { 12 } \\
