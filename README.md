@@ -10,7 +10,7 @@ This repository contains all the sparse matrix multiplication algorithms found b
 
 ## Algorithms
 
-The folder `algorithms` contains all the optimal sparse matrix multiplication strategies between $3\times 3\times 3$and $5\times 5\times 5$ in both modular arithmetic ($\mathbb{Z}_2$) and standard arithmetic found by AlphaSparseTensor. More specifically, for matrix multiplication $\textbf{A}\textbf{B}=\textbf{C}$, in each matrix multiplication size, we sequentially introduced sparse elements at all positions of matrix A (i.e., setting them to 0, and they are not included in subsequent calculations), once at a time, and provided the corresponding multiplication strategies.
+The folder `algorithms` contains all the optimal sparse matrix multiplication strategies between $3\times 3\times 3$ and $5\times 5\times 5$ in both modular arithmetic ($\mathbb{Z}_2$) and standard arithmetic found by AlphaSparseTensor. More specifically, for matrix multiplication $\textbf{A}\textbf{B}=\textbf{C}$, in each matrix multiplication size, we sequentially introduced sparse elements at all positions of matrix A (i.e., setting them to 0, and they are not included in subsequent calculations), once at a time, and provided the corresponding multiplication strategies.
 
 ### File Directory
 
