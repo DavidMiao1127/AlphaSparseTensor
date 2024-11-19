@@ -10,11 +10,11 @@ This repository contains all the sparse matrix multiplication algorithms found b
 
 ## Algorithms
 
-The folder `algorithms` contains all the optimal sparse matrix multiplication strategies between $3\times 3\times 3$ and $5\times 5\times 5$ in both modular arithmetic ($\mathbb{Z}_2$) and standard arithmetic found by AlphaSparseTensor. More specifically, for matrix multiplication $\textbf{A}\textbf{B}=\textbf{C}$, in each matrix multiplication size, we sequentially introduced sparse elements at all positions of matrix A (i.e., setting them to 0, and they are not included in subsequent calculations), once at a time, and provided the corresponding multiplication strategies.
+The folder `algorithms` contains all the optimal sparse matrix multiplication strategies between $3\times 3\times 3$ and $5\times 5\times 5$ in both modular arithmetic and standard arithmetic found by AlphaSparseTensor. More specifically, for matrix multiplication $\textbf{A}\textbf{B}=\textbf{C}$, in each matrix multiplication size, we sequentially introduced sparse elements at all positions of matrix A (i.e., setting them to 0, and they are not included in subsequent calculations), once at a time, and provided the corresponding multiplication strategies.
 
 ### File Directory
 
-*	`moduler`：sparse matrix multiplication algorithms in moduler arithmetic ($\mathbb{Z}_2$) (i.e., each position in the matrix is either 0 or 1, except for the sparse positions that are determined to be 0.)
+*	`moduler`：sparse matrix multiplication algorithms in moduler arithmetic (i.e., each position in the matrix is either 0 or 1, except for the sparse positions that are determined to be 0.)
   *	`3-3-3`：algorithm for a $3\times 3$ matrix $\textbf{A}$ multiplied by another $3\times 3$ matrix $\textbf{B}$
     *	`333-a11.txt`：algorithm for the situation in which the (1,1) element of matrix $\textbf{A}$ is sure to be 0
     *	……
